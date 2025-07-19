@@ -1,0 +1,6 @@
+<h1><%= @post.title %></h1>
+<p><%= @post.content %></p>
+<% if user_signed_in? && current_user.id == @post.user_id %>
+  <%= link_to 'Edit this post', edit_post_path %>
+<% end %>
+<%= link_to 'Get back to Feed', root_path %>
